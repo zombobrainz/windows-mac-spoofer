@@ -1,3 +1,5 @@
+<p align="center"><img src="zombo-watermark.svg" width="300" alt="zombo.exe"></p>
+
 # Windows MAC Spoofer
 
 Simple Windows MAC address changer. Auto-detects your network adapters, then randomizes, sets, or restores the MAC with one script.
