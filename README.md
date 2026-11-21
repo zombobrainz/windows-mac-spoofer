@@ -87,6 +87,3 @@ Run the tool again and choose option `3`. You can also reboot after removing the
 
 This tool is intended for privacy, testing, and learning on hardware and networks you own or have permission to use. Using it to impersonate another device or bypass access controls on networks you don't own may violate laws or terms of service. You are responsible for how you use it.
 
-## License
-
-MIT. Add a `LICENSE` file when you create the repo.
