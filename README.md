@@ -12,6 +12,7 @@ Simple Windows MAC address changer. Auto-detects your network adapters, then ran
 - Random MAC, custom MAC, or one-step restore of the original
 - Asks for Administrator rights automatically
 - Verifies the change and tells you if your driver ignored it
+- Open source and readable: it's one plain PowerShell script
 
 ## Requirements
 
@@ -33,11 +34,7 @@ Simple Windows MAC address changer. Auto-detects your network adapters, then ran
    - `3` Restore the original MAC
 6. Wait a few seconds while the adapter restarts. The script prints the new MAC when it's done.
 
-### Option 2: Run the .exe
-
-Download `MACSpoofer.exe` from the [Releases](../../releases) page and double-click it. It asks for Administrator rights itself.
-
-### Option 3: Run from PowerShell
+### Option 2: Run from PowerShell
 
 Open PowerShell as Administrator, then:
 
@@ -47,7 +44,9 @@ cd path\to\the\folder
 .\MACSpoofer.ps1
 ```
 
-## Building the .exe yourself
+## Want an .exe? Build it yourself
+
+No prebuilt .exe is provided, so there is nothing unsigned to download. You can compile your own from the script:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass -Force
@@ -74,7 +73,7 @@ Run the tool again and choose option `3`. You can also reboot after removing the
 - The change is stored in the registry, so it **survives reboots** until you restore it.
 - Some drivers (certain Intel and Realtek ones) ignore or reject MAC changes. If the MAC doesn't change, try another adapter or a USB one.
 - Some drivers only accept MACs whose second hex digit is `2`, `6`, `A`, or `E`. The random option always uses `02`.
-- Antivirus or SmartScreen may flag the .exe because it's an unsigned PowerShell wrapper that changes network settings. The full source is in `MACSpoofer.ps1` if you want to read it first.
+- If you build your own .exe, antivirus or SmartScreen may flag it because it's an unsigned PowerShell wrapper that changes network settings. The full source is in `MACSpoofer.ps1` if you want to read it first.
 
 ## Troubleshooting
 
